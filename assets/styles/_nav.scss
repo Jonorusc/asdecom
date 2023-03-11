@@ -1,0 +1,26 @@
+.nav {
+  background: $color-primary;
+  height: 5rem;
+  .nav-content {
+    padding: 1rem;
+    font-size: $size-medium;
+    height: 5rem;
+    @include flex(space-between, center);
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      li {
+        padding: 0 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        button {
+          margin-left: 7rem;
+        }
+      }
+    }
+  }
+}
