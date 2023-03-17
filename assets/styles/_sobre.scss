@@ -1,0 +1,77 @@
+#sobre {
+  background-color: #f2f2f2;
+  .sobre-content {
+    p {
+      box-sizing: border-box;
+      text-align: center;
+      font-size: $size-large;
+      text-justify: distribute-all-lines;
+      text-rendering: optimizeLegibility;
+      text-align: justify;
+      font-family: "rawline",helvetica,arial,sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #555;
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      letter-spacing: normal;
+      vertical-align: baseline;
+      // @include flex(center, center);
+      &.start {
+        text-align: start;
+      }
+    }
+
+    .accordion {
+      margin-top: 6rem;
+    }
+
+    .contato {
+      width: 30rem;
+      margin-top: 5rem;
+      margin-left: auto;
+      margin-right: auto;
+      @include flex(center, center);
+
+      // botão para contato com animação da seta
+
+      .btn-contato {
+        outline: none;
+        border: none;
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: $size-medium;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $color-secondary;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 1rem;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-top: 0.5rem solid transparent;
+          border-bottom: 0.5rem solid transparent;
+          border-left: 0.5rem solid $color-white;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::after {
+          border-left: 0.5rem solid $color-secondary;
+        }
+      }
+    }
+  }
+}
