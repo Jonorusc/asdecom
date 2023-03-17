@@ -23,6 +23,18 @@ getGallery.addEventListener('mouseleave', () => imgActive.classList.add('active'
 
 // navbar active
 
+// toggler 
+const toggler = document.querySelector('.toggler')
+const bars = document.querySelectorAll('.bar')
+const menu = document.querySelector('.menu-nav')
+
+toggler.addEventListener('click', function() {
+  menu.classList.toggle('active')
+  bars.forEach(function(bar) {
+    bar.classList.toggle('active')
+  })
+})
+
 const nav = document.querySelector('.nav-content')
 const navLinks = nav.querySelectorAll('.nav-hover')
 const sections = document.querySelectorAll('section[id]')
@@ -53,6 +65,22 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive)
 
 
+// close menu onclick
+const links = document.querySelectorAll('.nav-hover')
+
+links.forEach(link => {
+  link.addEventListener('click', function() {
+    if(menu.classList.contains('active')) {
+      menu.classList.remove('active')
+      bars.forEach(function(bar) {
+        bar.classList.remove('active')
+      })
+    }
+  })
+})
+  
+
+
 // accordion
 const accordionHeaders = document.querySelectorAll('.accordion-header')
 
@@ -72,17 +100,6 @@ accordionHeaders.forEach(header => {
   header.addEventListener('click', toggleAccordion)
 })
 
-// toggler 
-const toggler = document.querySelector('.toggler')
-const bars = document.querySelectorAll('.bar')
-const menu = document.querySelector('.menu-nav')
-
-toggler.addEventListener('click', function() {
-  menu.classList.toggle('active')
-  bars.forEach(function(bar) {
-    bar.classList.toggle('active')
-  })
-})
 
 // modal e carousel
 
