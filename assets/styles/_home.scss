@@ -1,0 +1,63 @@
+#home {
+  padding-top: 10rem;
+  background: url(../img/bbblurry.svg) no-repeat, url(../img/llline.svg) no-repeat,
+    // url(../img/mmmotif1.svg),
+    url(../img/ruido.png),
+    linear-gradient(50deg, #2b41c1, #4864ee);
+  background-attachment: fixed;
+  height: 69rem;
+  @media (min-width: 1466px) {
+    height: 75rem;
+    background: url(../img/bbblurry.svg) no-repeat, url(../img/ruido.png), linear-gradient(50deg, #2b41c1, #4864ee);
+  }
+
+  @media (max-width: 768px) {
+    background: 
+    url(../img/ruido.png),
+    linear-gradient(50deg, #2b41c1, #4864ee);
+    height: 49rem;
+  }
+  .home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // mobile
+    @media (max-width: 768px) {
+      grid-template-columns: unset;
+      place-items: center;
+    }
+    .left-side {
+      @include flex(center, center);
+      width: 100%;
+      .paragraph {
+        box-sizing: border-box;
+        text-align: center;
+        font-size: $size-xxlarge;
+        color: $color-white;
+        padding: 0 1rem;
+        .yellow {
+          color: #c19002;
+          text-decoration: underline;
+        }
+        .blue {
+          color: #4864ee;
+          text-decoration: underline;
+        }
+        .orange {
+          color: #f38519;
+          text-decoration: underline;
+        }
+      }
+    }
+    .right-side {
+      @include flex(center, center);
+      width: 100%;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    // mobile
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
