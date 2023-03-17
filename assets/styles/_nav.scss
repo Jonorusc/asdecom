@@ -1,25 +1,120 @@
 .nav {
-  background: $color-primary;
-  height: 5rem;
+  background-color: transparent;
+  height: $size-navbar;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.5s ease-in-out;
+  &.active {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+    background-color: $color-secondary;
+  }
   .nav-content {
-    padding: 1rem;
-    font-size: $size-medium;
-    height: 5rem;
+    height: $size-navbar;
     @include flex(space-between, center);
-    ul {
+    .logo {
+      width: 15rem;
+    }
+    .logo-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        display: none;
+      }
+      .logo-mobile {
+        display: block;
+        width: 4rem;
+      }
+    }
+
+    .menu-nav {
       list-style: none;
       display: flex;
       justify-content: space-between;
       margin: 0;
+      column-gap: 0.4rem;
+
+      @media (max-width: 768px) {
+        opacity: 0;
+        position: absolute;
+        background-color: $color-white;
+        // background-color: rgba($color: $color-white, $alpha: 0.8);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      &.active {
+        opacity: 1;
+        top: $size-navbar;
+        pointer-events: unset;
+      }
       li {
         padding: 0 1rem;
+        @include flex(center, center);
+        border-radius: 0.6rem;
+
+        @media (max-width: 768px) {
+          height: 5rem;
+          width: 80%;
+
+          &.active {
+            a {
+              color: $color-white;
+            }
+          }
+        }
+
         a {
-          color: black;
+          color: #f2f2f2;
+          @media (max-width: 768px) {
+            color: #555;
+          }
+          font-size: $size-xlarge;
           text-decoration: none;
         }
-        button {
+        .contato {
+          @media (max-width: 768px) {
+            margin-left: unset;
+            position: absolute;
+            top: $size-navbar;
+            padding: 1.4rem 2rem;
+          }
           margin-left: 7rem;
+          outline: none;
+          border: none;
+          @include flex(center, center);
+          column-gap: 0.2rem;
+          font-size: $size-xlarge;
+          cursor: pointer;
+          border-radius: 0.6rem;
+          color: #93cc1d;
+          background-color: #f2f2f2;
+          padding: 0.5rem 1rem;
+          &:active {
+            transform: scale(0.9);
+          }
         }
+      }
+    }
+    .toggler {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+        width: 40px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
       }
     }
   }
