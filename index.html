@@ -8,34 +8,252 @@
     <!-- styles -->
     <link rel="stylesheet" href="assets/styles/styles.css" />
     <!-- <link rel="stylesheet" href="assets/styles/styles.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
 
     <!-- icons -->
-    <link rel="stylesheet" href="assets/icons/remixicon.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.min.css" rel="stylesheet" />
 
-    <title>AMAR - Casa Ancora</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+
+    <title>AAMAR - Casa Âncora</title>
   </head>
   <body>
     <!-- nav -->
-    <nav class="nav">
+    <nav class="nav active">
       <div class="container">
         <div class="nav-content">
           <a href="index.html">
-            <img src="assets/img/logo.png" alt="logo" />
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+            <img src="assets/img/icon.png" alt="logo" class="logo-mobile" />
           </a>
-          <ul>
-            <li class="nav-hover"><a href="#home">Home</a></li>
+          <ul class="menu-nav">
+            <li class="nav-hover active"><a href="#home">Home</a></li>
             <li class="nav-hover"><a href="#sobre">Sobre</a></li>
-            <li class="nav-hover"><a href="#contato">Contato</a></li>
-            <li><button class="inverted-5">Contato</button></li>
+            <li class="nav-hover"><a href="#galeria">Galeria</a></li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=5584999408043" target="_blank" class="inverted-5 contato">
+                <i class="ri-whatsapp-line"></i> Contato
+              </a>
+            </li>
           </ul>
+          <div class="toggler">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- home -->
+    <section class="home" id="home">
+      <div class="container">
+        <!-- grid 1fr 1fr -->
+        <div class="home-content">
+          <div class="left-side">
+            <div class="rotating-text">
+              <p class="text paragraph active">
+                Bem-vindo à nossa casa <span class="yellow">terapêutica.</span> Somos uma equipe de profissionais comprometidos em ajudar nossos pacientes a superar seus desafios pessoais e
+                emocionais.
+              </p>
+              <p class="text paragraph">Nossa casa terapêutica é um lugar seguro e acolhedor onde nossos pacientes podem se concentrar em sua <span class="orange">recuperação</span> e bem-estar</p>
+              <p class="text paragraph">Acreditamos que cada pessoa é <span class="blue">única</span> e que cada um merece um tratamento personalizado e adaptado às suas necessidades específicas.</p>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="gallery">
+              <img src="./assets/img/galery-1.jpg" alt="Pessoas reunidas embaixo de uma árvore" />
+              <img src="./assets/img/galery-2.jpg" alt="Pessoas reunidas no cinema" />
+              <img src="./assets/img/galery-3.jpg" alt="Foto de um membro da casa terapêutica" />
+              <img src="./assets/img/galery-4.jpg" alt="Mulheres reunidas" />
+              <img src="./assets/img/galery-5.jpg" class="active" alt="Foto com os professores usando camisetas com frases motivadoras" />
+              <img src="./assets/img/galery-6.jpg" alt="Foto com professores e pacientes reunidos" />
+              <img src="./assets/img/galery-7.jpg" alt="Foto (selfie) feita pela instrutora junto aos pacientes e membros" />
+              <img src="./assets/img/galery-8.jpg" alt="Foto tirada durante uma palestra" />
+              <img src="./assets/img/galery-9.jpg" alt="Mulher tirando selfie com as cestas basicas recebidas" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- sobre -->
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <div class="sobre-content">
+          <h4 class="title">Sobre nós</h4>
+
+          <p class="start">
+            Bem-vindo à seção "Sobre Nós" da nossa casa terapêutica. Nós somos uma equipe de profissionais altamente qualificados e experientes dedicados a ajudar nossos pacientes a superar seus
+            desafios pessoais e emocionais.
+          </p>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h2>Objetivo</h2>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Nosso objetivo é oferecer um ambiente seguro e acolhedor onde nossos pacientes possam se concentrar em sua recuperação e bem-estar. Acreditamos que cada pessoa é única e merece um
+                  tratamento personalizado adaptado às suas necessidades específicas. Por isso, trabalhamos em estreita colaboração com nossos pacientes para desenvolver um plano de tratamento
+                  individualizado que atenda às suas necessidades e objetivos.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h2>A organização</h2>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  A AAMAR surgiu pela livre deliberação e reunião de cidadãos de bem, em dias com seus direitos e deveres civis, que unidos pelo propósito humanitário e filantrópico resolveram amparar
+                  e restaurar aos necessitados e excluídos da sociedade. Não fosse a abnegação e dedicação da sra. Ângela Sousa, fundadora presidente da instituição, há 20 anos trabalhando e
+                  esforçando-se a amar, amparando e restaurando a tantas pessoas em situação de vulnerabilidade social, a Casa Âncora não seria uma realidade no resgate e recuperação dos
+                  desfavorecidos e abandonados. A área de atuação da entidade é a assistência e ação social sem fins lucrativos nem vínculo político-partidário e/ou religioso. Para atender aos
+                  objetivos da Associação Âncora em viabilizar a reintegração social dos internos são desenvolvidas ações de educação social e humanitária, cursos profissionalizantes para geração de
+                  renda, assistência médica, jurídica, previdenciária e motivacional.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h2>A Periferia</h2>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  O fato de acolher pessoas em situação de vulnerabilidade social, faz com que seja gerado um impacto social, tanto nas comunidades periféricas como nos demais bairros que estas
+                  pessoas se concentram. Comunidades como: Santo Antônio, Rincão, Paredões, barrocas e te mesmo o centro da cidade podem sentir o reflexo de nossa ação. Uma vez que muitas vezes os
+                  acolhidos são resgatados das ruas no centro da cidade.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Estamos comprometidos em ajudar nossos pacientes a alcançar seus objetivos e a viver uma vida saudável e feliz. Entre em contato conosco para saber mais sobre nossos serviços e como
+            podemos ajudá-lo ou alguém que você conhece.
+          </p>
+
+          <div class="contato">
+            <button class="btn-contato">Entrar em contato</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- galeria -->
-    <!-- contato -->
-    <script src="assets/scripts/script.js"></script>
+    <section id="galeria">
+      <div class="container">
+        <div class="galeria-content">
+          <h4 class="title">Galeria</h4>
+
+          <div class="galeria">
+            <div class="galeria-item">
+              <img src="./assets/img/galery-1.jpg" alt="Foto de um membro da casa terapêutica" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-2.jpg" alt="Pessoas reunidas no cinema" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-3.jpg" alt="Foto de um membro da casa terapêutica" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-4.jpg" alt="Mulheres reunidas" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-5.jpg" alt="Foto com os professores usando camisetas com frases motivadoras" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-6.jpg" alt="Foto com professores e pacientes reunidos" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-7.jpg" alt="Foto (selfie) feita pela instrutora junto aos pacientes e membros" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-8.jpg" alt="Foto tirada durante uma palestra" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="galeria-item">
+              <img src="./assets/img/galery-9.jpg" alt="Mulher tirando selfie com as cestas basicas recebidas" />
+              <div class="item-hover">
+                <div>
+                  <i class="ri-whatsapp-line"></i>
+                  <span>Compartilhar essa foto no Whatsapp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="modal" class="modal">
+            <button class="modal-prev"><i class="ri-arrow-left-line"></i></button>
+            <button class="modal-next"><i class="ri-arrow-right-line"></i></button>
+
+            <span class="close">&times;</span>
+            <img class="modal-content" src="" alt="Foto escolhida na galeria">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- importar script como modulo -->
+    <script type="module" src="assets/scripts/main.js"></script>
   </body>
 </html>
