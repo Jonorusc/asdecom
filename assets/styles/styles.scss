@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 
 // vars
-$color-primary: #F0C808;
-$color-secondary: #000;
+$color-primary: #f0c808;
+$color-secondary: #2b41c1;
+$color-tertiary: #f7dd93;
+$color-quaternary: #4864ee;
+$color-quinary: #93cc1d;
+$color-senary: #c19002;
 $color-white: #fff;
 
 $size-xsmall: 1.2rem;
 $size-small: 1.4rem;
 $size-medium: 1.6rem;
 $size-large: 1.8rem;
-$size-xlarge: 2.0rem;
+$size-xlarge: 2rem;
 $size-xxlarge: 2.8rem;
 $size-huge: 5.2rem;
+$size-navbar: 5rem;
 
-$font-family: 'Lato', -apple-system, BlinkMacSystemFont, 
-'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
-'Helvetica Neue', 'sans-serif';
+$font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "sans-serif";
 
 // mixins
-@mixin flex($justify: center, $align: center) {
-  display: flex;
+@mixin flex($justify: center, $align: center, $display: flex) {
+  display: $display;
   justify-content: $justify;
   align-items: $align;
 }
@@ -31,6 +33,7 @@ $font-family: 'Lato', -apple-system, BlinkMacSystemFont,
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 
   &::before,
   &::after {
@@ -44,18 +47,144 @@ html {
 
 body {
   font-family: $font-family;
+  background-color: #f2f2f2;
 }
 
 // components
-@import 'animations';
-@import 'nav';
+@import "animations";
+@import "nav";
+@import "home";
+@import "sobre";
+@import "galeria";
 
 // pages
 .container {
-  max-width: 140rem;
+  max-width: 130rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
+section {
+  padding: 10rem 0;
+}
 
+h4.title {
+  font-size: calc($size-huge - 2rem);
+  font-weight: 700;
+  color: $color-quaternary;
+  margin-bottom: 2rem;
+  // text-indent: 1rem;
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 0.5rem;
+  //   height: 2rem;
+  //   transform: translateY(-140%);
+  //   background-color: $color-primary;
+  // }
+}
 
+// modal
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  transition: all 0.4s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    top: 5rem;
+    pointer-events: auto;
+  }
+
+  .modal-prev, .modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 1rem;
+    color: $color-white;
+    background-color: transparent;
+    font-size: $size-huge;
+    outline: none;
+    border: none;
+
+    &:active {
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+  .modal-prev {
+    left: 1rem;
+  }
+  .modal-next {
+    right: 1rem;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+// carousel
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.carousel-slide {
+  display: flex;
+  width: 300%;
+}
+.carousel-slide img {
+  width: 33.33%;
+  height: 400px;
+}
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
+.carousel-prev {
+  left: 0;
+}
+.carousel-next {
+  right: 0;
+}
