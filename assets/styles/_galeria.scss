@@ -1,0 +1,58 @@
+#galeria {
+  .galeria-content {
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
+      gap: 1rem;
+      .galeria-item {
+        width: 100%;
+        height: 30rem;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          .item-hover {
+            opacity: 1;
+            height: 40%;
+            pointer-events: auto;
+          }
+        }
+
+        .item-hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background-color: rgba(59, 59, 59, 0.8);
+          display: grid;
+          place-items: center;
+          opacity: 0;
+          pointer-events: none;
+          transition: height 0.3s ease-in-out;
+          transform-origin: bottom top;
+
+          div {
+            @include flex(center, center);
+            flex-direction: column;
+            i {
+              font-size: $size-huge;
+              color: $color-quinary;
+              margin-bottom: 1rem;
+            }
+            span {
+              color: $color-white;
+              font-size: $size-medium;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
