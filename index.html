@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- styles -->
-    <link rel="stylesheet" href="assets/styles/styles.css" />
-    <!-- <link rel="stylesheet" href="assets/styles/styles.min.css" /> -->
+    <!-- <link rel="stylesheet" href="assets/styles/styles.css" /> -->
+    <link rel="stylesheet" href="assets/styles/styles.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
 
     <!-- icons -->
@@ -19,6 +19,7 @@
     <link rel="manifest" href="./assets/icons/site.webmanifest" />
 
     <title>AAMAR - Casa Âncora</title>
+
   </head>
   <body>
     <!-- nav -->
@@ -34,9 +35,7 @@
             <li class="nav-hover"><a href="#sobre">Sobre</a></li>
             <li class="nav-hover"><a href="#galeria">Galeria</a></li>
             <li>
-              <a href="https://api.whatsapp.com/send?phone=5584999408043" target="_blank" class="inverted-5 contato">
-                <i class="ri-whatsapp-line"></i> Contato
-              </a>
+              <a href="https://api.whatsapp.com/send?phone=5584999408043" target="_blank" class="inverted-5 contato"> <i class="ri-whatsapp-line"></i> Contato </a>
             </li>
           </ul>
           <div class="toggler">
@@ -61,6 +60,20 @@
               </p>
               <p class="text paragraph">Nossa casa terapêutica é um lugar seguro e acolhedor onde nossos pacientes podem se concentrar em sua <span class="orange">recuperação</span> e bem-estar</p>
               <p class="text paragraph">Acreditamos que cada pessoa é <span class="blue">única</span> e que cada um merece um tratamento personalizado e adaptado às suas necessidades específicas.</p>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/AjudeACasaAncora" 
+                target="_blank" 
+                class="social-item"
+              >
+                <i class="ri-facebook-fill"></i> 
+              </a>
+              <a href="https://www.instagram.com/casaancora_aamar/" 
+                target="_blank" 
+                class="social-item"
+              >
+                <i class="ri-instagram-fill"></i> 
+              </a>
             </div>
           </div>
           <div class="right-side">
@@ -242,18 +255,43 @@
               </div>
             </div>
           </div>
-          
+
           <div id="modal" class="modal">
             <button class="modal-prev"><i class="ri-arrow-left-line"></i></button>
             <button class="modal-next"><i class="ri-arrow-right-line"></i></button>
 
             <span class="close">&times;</span>
-            <img class="modal-content" src="" alt="Foto escolhida na galeria">
+            <img class="modal-content" src="" alt="Foto escolhida na galeria" />
           </div>
         </div>
       </div>
     </section>
-    <!-- importar script como modulo -->
-    <script type="module" src="assets/scripts/main.js"></script>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-content">
+            <div class="footer-left">
+              <img src="./assets/img/icon.png" alt="" />
+              <p class="footer-text">
+                Associação Âncora <br />
+                Morada de amparo e restauração
+              </p>
+              <div class="phone">
+                📞084 2142-1270
+              </div>
+              <div class="endereco">
+                📍Rua Raimundo de Almeida Lopes, 334 - Rincão <br> CEP: 59630-670
+              </div>
+            </div>
+          </div>
+          <div class="copy">
+            <p>&copy; 2023 - Todos os direitos reservados</p>
+            <a class="rise"><img src="./assets/img/rise.png" alt="desenvolvedores" />Rise Tech Mossoró</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>
