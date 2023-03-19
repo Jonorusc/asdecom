@@ -203,3 +203,13 @@ function temNumero(string) {
 }
 
 
+// show and hide elementos
+
+function showEl(elQuery, display = 'block') {
+  document.querySelector(elQuery).style.display = display
+}
+
+function hideEl(elQuery) {
+  document.querySelector(elQuery).style.display = 'none'
+}
+
